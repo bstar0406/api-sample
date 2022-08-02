@@ -1,0 +1,31 @@
+{
+  "name": "mern-auth-boilerplate",
+  "version": "1.0.0",
+  "description": "MERN auth boilerplate",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.1",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.9",
+    "nodemon": "^2.0.19",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2"
+  }
+}
